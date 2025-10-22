@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer">
+        <input type="number" id="minutes" placeholder="Minutes" min="0" max="99">
+        <div class="display-shell">
+            <svg class="progress-ring" viewBox="0 0 240 240" aria-hidden="true">
+                <defs>
+                    <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#24d8ff" />
+                        <stop offset="100%" stop-color="#36f9f6" />
+                    </linearGradient>
+                </defs>
+                <circle class="progress-ring__track" cx="120" cy="120" r="108"></circle>
+                <circle class="progress-ring__indicator" cx="120" cy="120" r="108"></circle>
+            </svg>
+            <div id="display">00:00</div>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
